@@ -6,7 +6,6 @@ import math
 
 import os
 import sys
-import glob
 
 import librosa
 import librosa.display
@@ -42,29 +41,145 @@ def divide_into_frames(data,frame_length=2048, hop_length = 512):
 
 #data
 # Paths for data.
-print("start")
-directories = sorted(glob.glob("../dataset/*/*.csv"))
+Ravdess = "../input/ravdess-emotional-speech-audio/audio_speech_actors_01-24/"
+Crema = "../input/cremad/AudioWAV/"
+Tess = "../input/Tess/Tess/"
+Savee = "../input/surrey-audiovisual-expressed-emotion-savee/ALL/"
+
+ravdess_directory_list = os.listdir(Ravdess)
 
 file_emotion = []
-frames = []
-for dir in directories:
-    part = dir.split('/')[-1]
-    part = dir.split('_')
-    file_emotion.append(part[0])
-    df = pd.read_csv(dir)
-    data = df.values.reshape(1,len(df))[0]
-    data = divide_into_frames(data)
-    frames += list(data)
+file_path = []
+for dir in ravdess_directory_list:
+    # as their are 20 different actors in our previous directory we need to extract files for each actor.
+    actor = os.listdir(Ravdess + dir)
+    for file in actor:
+        part = file.split('.')[0]
+        part = part.split('-')
+        # third part in each file represents the emotion associated to that file.
+        file_emotion.append(int(part[2]))
+        file_path.append(Ravdess + dir + '/' + file)
+        
+# dataframe for emotion of files
+emotion_df = pd.DataFrame(file_emotion, columns=['Emotions'])
 
+# dataframe for path of files.
+path_df = pd.DataFrame(file_path, columns=['Path'])
+Ravdess_df = pd.concat([emotion_df, path_df], axis=1)
 
+# changing integers to actual emotions.
+Ravdess_df.Emotions.replace({1:'neutral', 2:'calm', 3:'happy', 4:'sad', 5:'angry', 6:'fear', 7:'disgust', 8:'surprise'}, inplace=True)
 
-input_data = np.array(frames)
+crema_directory_list = os.listdir(Crema)
+
+file_emotion = []
+file_path = []
+
+for file in crema_directory_list:
+    # storing file paths
+    file_path.append(Crema + file)
+    # storing file emotions
+    part=file.split('_')
+    if part[2] == 'SAD':
+        file_emotion.append('sad')
+    elif part[2] == 'ANG':
+        file_emotion.append('angry')
+    elif part[2] == 'DIS':
+        file_emotion.append('disgust')
+    elif part[2] == 'FEA':
+        file_emotion.append('fear')
+    elif part[2] == 'HAP':
+        file_emotion.append('happy')
+    elif part[2] == 'NEU':
+        file_emotion.append('neutral')
+    else:
+        file_emotion.append('Unknown')
+        
+# dataframe for emotion of files
+emotion_df = pd.DataFrame(file_emotion, columns=['Emotions'])
+
+# dataframe for path of files.
+path_df = pd.DataFrame(file_path, columns=['Path'])
+Crema_df = pd.concat([emotion_df, path_df], axis=1)
+
+tess_directory_list = os.listdir(Tess)
+
+file_emotion = []
+file_path = []
+
+for dir in tess_directory_list:
+    directories = os.listdir(Tess + dir)
+    for file in directories:
+        part = file.split('.')[0]
+        part = part.split('_')[2]
+        if part=='ps':
+            file_emotion.append('surprise')
+        else:
+            file_emotion.append(part)
+        file_path.append(Tess + dir + '/' + file)
+        
+# dataframe for emotion of files
+emotion_df = pd.DataFrame(file_emotion, columns=['Emotions'])
+
+# dataframe for path of files.
+path_df = pd.DataFrame(file_path, columns=['Path'])
+Tess_df = pd.concat([emotion_df, path_df], axis=1)
+
+savee_directory_list = os.listdir(Savee)
+
+file_emotion = []
+file_path = []
+
+for file in savee_directory_list:
+    file_path.append(Savee + file)
+    part = file.split('_')[1]
+    ele = part[:-6]
+    if ele=='a':
+        file_emotion.append('angry')
+    elif ele=='d':
+        file_emotion.append('disgust')
+    elif ele=='f':
+        file_emotion.append('fear')
+    elif ele=='h':
+        file_emotion.append('happy')
+    elif ele=='n':
+        file_emotion.append('neutral')
+    elif ele=='sa':
+        file_emotion.append('sad')
+    else:
+        file_emotion.append('surprise')
+        
+# dataframe for emotion of files
+emotion_df = pd.DataFrame(file_emotion, columns=['Emotions'])
+
+# dataframe for path of files.
+path_df = pd.DataFrame(file_path, columns=['Path'])
+Savee_df = pd.concat([emotion_df, path_df], axis=1)
+
+data_path = pd.concat([Ravdess_df, Crema_df, Tess_df, Savee_df], axis = 0)
+
+#Data preprocessing
+input_data = []
+for i in range(len(data_path)):
+    data, sr = librosa.load(data_path.iloc[i,1],duration=2.5, offset=0.6)
+    # input_data.append(divide_into_frames(data))
+    input_data += list(divide_into_frames(data))
+# framenum = 0
+# for file in input_data:
+#     framenum += len(file)
+
+input_data = np.array(input_data)
+# input_data = input_data.reshape(len(input_data)*framenum,2048)
 input_data = input_data.reshape(len(input_data),2048)
 print("reshaped input data")
 
-mfcc_list = pd.read_csv("../mfcc_frame_labels.csv",header=None)
-mfcc_list = mfcc_list.values
-print("loaded mfcc_labels")
+mfcc_list = []
+for i in input_data:
+    mfcc_list.append(librosa.feature.mfcc(y=i,n_fft=2048,hop_length = 512,center=False).T)
+
+mfcc_list = np.array(mfcc_list)
+mfcc_list = mfcc_list.reshape(len(input_data),20)
+print("reshaped mfcc list")
 
 
 #Model Training
@@ -72,27 +187,31 @@ print("loaded mfcc_labels")
 mfcc_X = input_data
 mfcc_y = mfcc_list
 
-#mfcc
-model=Sequential()
-model.add(Conv1D(128, kernel_size=512, strides=1, padding='valid', activation='relu', input_shape=(2048, 1)))
-model.add(MaxPooling1D(pool_size=512, strides = 220, padding = 'valid'))
-model.add(Flatten())
-model.add(Dense(units=256, activation='relu'))
-model.add(Dense(units=128, activation='relu'))
-model.add(Dense(units=20, activation='relu'))
-model.compile(optimizer="adam", loss="mse", metrics=["mse","mae"])
+#rms model
+model = Sequential()
+model.add(Dense(1024,input_shape=(2048,), activation='relu', name="mfcc_1"))
+model.add(Dense(736, activation='relu',name="mfcc_2"))
+model.add(Dense(32, activation='relu',name="mfcc_3"))
+model.add(Dense(32, activation='relu',name="mfcc_4"))
+model.add(Dense(32, activation='relu',name="mfcc_5"))
+model.add(Dense(32, activation='relu',name="mfcc_6"))
+model.add(Dense(32, activation='relu',name="mfcc_7"))
+model.add(Dense(20, activation='relu',name="output"))
+model.compile(optimizer='adam',loss='mse', metrics=['mse','mae'])
 
+mfcc_X = input_data
+mfcc_y = mfcc_list
 mfcc_x_train, mfcc_x_res, mfcc_y_train, mfcc_y_res = train_test_split(mfcc_X, mfcc_y,test_size=0.3,random_state=0, shuffle=True)
 mfcc_x_val, mfcc_x_test, mfcc_y_val, mfcc_y_test = train_test_split(mfcc_x_res, mfcc_y_res,test_size=0.5,random_state=0, shuffle=True)
-mfcc_x_train.shape, mfcc_y_train.shape, mfcc_x_val.shape, mfcc_y_val.shape, mfcc_x_test.shape, mfcc_y_test.shape
+
 
 rlrp = ReduceLROnPlateau(monitor='loss', factor=0.4, verbose=0, patience=2, min_lr=0.0000001)
-history = model.fit(mfcc_x_train, mfcc_y_train, batch_size=128, epochs=50, validation_data=(mfcc_x_val, mfcc_y_val), callbacks=[rlrp])
+history = model.fit(mfcc_x_train, mfcc_y_train, batch_size=64, epochs=50, validation_data=(mfcc_x_val, mfcc_y_val), callbacks=[rlrp])
 
 pred = model.predict(mfcc_x_test)
 print("r squared value: " + str(r2_score(mfcc_y_test, pred)))
 
-print("MSE of our model on test data : " , model.evaluate(mfcc_x_test,mfcc_y_test)[1])
+print("MSE of our model on test data : " , model.evaluate(mfcc_x_test,mfcc_y_test)[1]*100 , "%")
 
 epochs = [i for i in range(50)]
 fig , ax = plt.subplots(1,2)
