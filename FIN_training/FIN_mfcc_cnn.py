@@ -79,7 +79,7 @@ model.add(MaxPooling1D(pool_size=512, strides = 220, padding = 'valid'))
 model.add(Flatten())
 model.add(Dense(units=256, activation='relu'))
 model.add(Dense(units=128, activation='relu'))
-model.add(Dense(units=20, activation='relu'))
+model.add(Dense(units=20, activation='linear'))
 model.compile(optimizer="adam", loss="mse", metrics=["mse","mae"])
 
 mfcc_x_train, mfcc_x_res, mfcc_y_train, mfcc_y_res = train_test_split(mfcc_X, mfcc_y,test_size=0.3,random_state=0, shuffle=True)
@@ -87,7 +87,7 @@ mfcc_x_val, mfcc_x_test, mfcc_y_val, mfcc_y_test = train_test_split(mfcc_x_res, 
 mfcc_x_train.shape, mfcc_y_train.shape, mfcc_x_val.shape, mfcc_y_val.shape, mfcc_x_test.shape, mfcc_y_test.shape
 
 rlrp = ReduceLROnPlateau(monitor='loss', factor=0.4, verbose=0, patience=2, min_lr=0.0000001)
-history = model.fit(mfcc_x_train, mfcc_y_train, batch_size=128, epochs=50, validation_data=(mfcc_x_val, mfcc_y_val), callbacks=[rlrp])
+history = model.fit(mfcc_x_train, mfcc_y_train, batch_size=256, epochs=50, validation_data=(mfcc_x_val, mfcc_y_val), callbacks=[rlrp])
 
 pred = model.predict(mfcc_x_test)
 print("r squared value: " + str(r2_score(mfcc_y_test, pred)))
@@ -114,5 +114,5 @@ ax[1].set_title('Training & Testing Accuracy')
 ax[1].legend()
 ax[1].set_xlabel("Epochs")
 plt.show()
-plt.savefig("FIN_mfcc_training_full_dataset.png")
-model.save("FIN_mfcc_training_full_dataset")
+plt.savefig("FIN_mfcc_training_test_2.png")
+model.save("FIN_mfcc_training_test_2")
