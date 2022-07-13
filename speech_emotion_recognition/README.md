@@ -1,5 +1,6 @@
-## Baseline Model & Cosolidated Model
+## Baseline Model & Consolidated Model
 
+The consolidated model classifies audio files in frame-level. Although this approach allows the FIN weights to be trained because the FINs are part of the consolidated model, it deviates from the baseline model in that this model outputs one emotion for one frame while the baseline model outputs one emotion for one audio file.
 ### Baseline Model
 Accuracy :  61.61154508590698 %
 | precision | recall | f1-score | support |
@@ -19,3 +20,5 @@ Accuracy :  61.61154508590698 %
 ### Consolidated Model
 Untrainable: 30.9%
 Trainable: 29%
+
+### Baseline Compare Models
