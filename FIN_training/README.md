@@ -22,6 +22,6 @@
 | ZCR | 0.74 | 0.006 | 8.2K |
 | RMS |  |  |  |
 | Chroma | 0.83 | 0.01 | 149K |
-| Melspectrogram | 0.38 | 39.67 | 148K |
+| Melspectrogram | 0.39 | 18.39 | 525K |
 | MFCC | 0.91 | 22 | 265K |
 
