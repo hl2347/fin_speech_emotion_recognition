@@ -9,5 +9,5 @@ The Audio Dataset comes from 4 sources
 
 
 There are two ways in which the dataset is stored
-1. Wave files
+1. wav files
 2. csv files(Loads faster)
