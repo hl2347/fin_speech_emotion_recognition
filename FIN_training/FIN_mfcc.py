@@ -196,7 +196,7 @@ model.add(Dense(32, activation='relu',name="mfcc_4"))
 model.add(Dense(32, activation='relu',name="mfcc_5"))
 model.add(Dense(32, activation='relu',name="mfcc_6"))
 model.add(Dense(32, activation='relu',name="mfcc_7"))
-model.add(Dense(20, activation='relu',name="output"))
+model.add(Dense(20, activation='linear',name="output"))
 model.compile(optimizer='adam',loss='mse', metrics=['mse','mae'])
 
 mfcc_X = input_data

@@ -8,7 +8,7 @@
 | RMS | 0.99 | 6.7e-06 | 3.2M |
 | Chroma | 0.90 | 0.60 | 3.8M |
 | Melspectrogram | 0.18 | 38914.78 | 4.2M |
-| MFCC | \-0.12 |  | 2.9M |
+| MFCC | 0.66 | 11361.83 | 2.9M |
 
 *MFCC FIN trained to predict the normalized feature showed an R-squared of 0.61
 
