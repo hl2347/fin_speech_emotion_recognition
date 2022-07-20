@@ -1,0 +1,9 @@
+2022-07-20 09:38:04.000417: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-07-20 09:38:07.114627: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 44182 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:06:00.0, compute capability: 7.5
+2022-07-20 09:38:07.168188: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 44182 MB memory:  -> device: 1, name: Quadro RTX 8000, pci bus id: 0000:2f:00.0, compute capability: 7.5
+2022-07-20 09:38:07.168691: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:2 with 44182 MB memory:  -> device: 2, name: Quadro RTX 8000, pci bus id: 0000:86:00.0, compute capability: 7.5
+2022-07-20 09:38:07.169154: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:3 with 44182 MB memory:  -> device: 3, name: Quadro RTX 8000, pci bus id: 0000:d8:00.0, compute capability: 7.5
+2022-07-20 09:38:19.250640: W tensorflow/core/kernels/gpu_utils.cc:50] Failed to allocate memory for convolution redzone checking; skipping this check. This is benign and only means that we won't check cudnn for out-of-bounds reads and writes. This message will only be printed once.
+2022-07-20 09:38:22.488297: I tensorflow/stream_executor/cuda/cuda_dnn.cc:368] Loaded cuDNN version 8101
+slurmstepd: error: *** JOB 22576912 ON gr030 CANCELLED AT 2022-07-20T12:00:35 ***
