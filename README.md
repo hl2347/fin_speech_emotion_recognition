@@ -47,6 +47,8 @@ FINs were designed utilizing two neural network structures. The first structure 
 |  Chroma  |      12     |  Conv. |  900K  |  93% |      92%      |
 |   MFCC   |      20     |  Conv. |  822K  |  92% |      54%      |
 | Melspec. |     128     |  Conv. |  983K  | 97%* |      97%*     |
+
+
 *Variance weighted R² was used to evaluate melspectrogram FIN to compensate 
 
 ### Ensemble models
