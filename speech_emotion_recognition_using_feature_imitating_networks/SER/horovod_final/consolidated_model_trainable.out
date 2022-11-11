@@ -1,0 +1,514 @@
+[1,2]<stdout>:Total GPUs available: 4
+[1,2]<stdout>:Hi I am a GPU and my rank is: 2
+[1,1]<stdout>:Total GPUs available: 4
+[1,1]<stdout>:Hi I am a GPU and my rank is: 1
+[1,3]<stdout>:Total GPUs available: 4
+[1,3]<stdout>:Hi I am a GPU and my rank is: 3
+[1,0]<stdout>:Total GPUs available: 4
+[1,0]<stdout>:Hi I am a GPU and my rank is: 0
+[1,2]<stdout>:[PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:1', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:2', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:3', device_type='GPU')]
+[1,0]<stdout>:[PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:1', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:2', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:3', device_type='GPU')]
+[1,3]<stdout>:[PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:1', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:2', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:3', device_type='GPU')]
+[1,1]<stdout>:[PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:1', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:2', device_type='GPU'), PhysicalDevice(name='/physical_device:GPU:3', device_type='GPU')]
+[1,2]<stdout>:loaded models
+[1,3]<stdout>:loaded models
+[1,1]<stdout>:loaded models
+[1,0]<stdout>:loaded models
+[1,3]<stdout>:loaded model weights
+[1,1]<stdout>:loaded model weights
+[1,0]<stdout>:loaded model weights
+[1,2]<stdout>:loaded model weights
+[1,3]<stdout>:set model weights
+[1,3]<stdout>:changed model trainability status
+[1,2]<stdout>:set model weights
+[1,2]<stdout>:changed model trainability status
+[1,3]<stdout>:compiled model
+[1,2]<stdout>:compiled model
+[1,0]<stdout>:set model weights
+[1,1]<stdout>:set model weights
+[1,0]<stdout>:changed model trainability status
+[1,1]<stdout>:changed model trainability status
+[1,0]<stdout>:compiled model
+[1,1]<stdout>:compiled model
+[1,3]<stdout>:Tue Oct 18 20:51:44 2022       
+[1,3]<stdout>:+-----------------------------------------------------------------------------+
+[1,3]<stdout>:| NVIDIA-SMI 510.47.03    Driver Version: 510.47.03    CUDA Version: 11.6     |
+[1,3]<stdout>:|-------------------------------+----------------------+----------------------+
+[1,3]<stdout>:| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+[1,3]<stdout>:| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+[1,3]<stdout>:|                               |                      |               MIG M. |
+[1,3]<stdout>:|===============================+======================+======================|
+[1,3]<stdout>:|   0  Tesla V100-PCIE...  On   | 00000000:06:00.0 Off |                    0 |
+[1,3]<stdout>:| N/A   35C    P0    35W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,3]<stdout>:|                               |                      |                  N/A |
+[1,3]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,3]<stdout>:|   1  Tesla V100-PCIE...  On   | 00000000:2F:00.0 Off |                    0 |
+[1,3]<stdout>:| N/A   32C    P0    33W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,3]<stdout>:|                               |                      |                  N/A |
+[1,3]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,3]<stdout>:|   2  Tesla V100-PCIE...  On   | 00000000:86:00.0 Off |                    0 |
+[1,3]<stdout>:| N/A   33C    P0    34W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,3]<stdout>:|                               |                      |                  N/A |
+[1,3]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,3]<stdout>:|   3  Tesla V100-PCIE...  On   | 00000000:D8:00.0 Off |                    0 |
+[1,3]<stdout>:| N/A   32C    P0    32W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,3]<stdout>:|                               |                      |                  N/A |
+[1,3]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,3]<stdout>:                                                                               
+[1,3]<stdout>:+-----------------------------------------------------------------------------+
+[1,3]<stdout>:| Processes:                                                                  |
+[1,3]<stdout>:|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+[1,3]<stdout>:|        ID   ID                                                   Usage      |
+[1,3]<stdout>:|=============================================================================|
+[1,3]<stdout>:|    0   N/A  N/A   1292549      C   python                            529MiB |
+[1,3]<stdout>:|    1   N/A  N/A   1292550      C   python                            529MiB |
+[1,3]<stdout>:|    2   N/A  N/A   1292551      C   python                            529MiB |
+[1,3]<stdout>:|    3   N/A  N/A   1292552      C   python                            529MiB |
+[1,3]<stdout>:+-----------------------------------------------------------------------------+
+[1,3]<stdout>:0
+[1,1]<stdout>:Tue Oct 18 20:51:44 2022       
+[1,1]<stdout>:+-----------------------------------------------------------------------------+
+[1,1]<stdout>:| NVIDIA-SMI 510.47.03    Driver Version: 510.47.03    CUDA Version: 11.6     |
+[1,1]<stdout>:|-------------------------------+----------------------+----------------------+
+[1,1]<stdout>:| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+[1,1]<stdout>:| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+[1,1]<stdout>:|                               |                      |               MIG M. |
+[1,1]<stdout>:|===============================+======================+======================|
+[1,0]<stdout>:Tue Oct 18 20:51:44 2022       
+[1,0]<stdout>:+-----------------------------------------------------------------------------+
+[1,0]<stdout>:| NVIDIA-SMI 510.47.03    Driver Version: 510.47.03    CUDA Version: 11.6     |
+[1,0]<stdout>:|-------------------------------+----------------------+----------------------+
+[1,0]<stdout>:| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+[1,0]<stdout>:| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+[1,0]<stdout>:|                               |                      |               MIG M. |
+[1,0]<stdout>:|===============================+======================+======================|
+[1,0]<stdout>:|   0  Tesla V100-PCIE...  On   | 00000000:06:00.0 Off |                    0 |
+[1,0]<stdout>:| N/A   35C    P0    35W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,0]<stdout>:|                               |                      |                  N/A |
+[1,0]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,1]<stdout>:|   0  Tesla V100-PCIE...  On   | 00000000:06:00.0 Off |                    0 |
+[1,1]<stdout>:| N/A   35C    P0    35W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,1]<stdout>:|                               |                      |                  N/A |
+[1,1]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,0]<stdout>:|   1  Tesla V100-PCIE...  On   | 00000000:2F:00.0 Off |                    0 |
+[1,0]<stdout>:| N/A   32C    P0    33W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,0]<stdout>:|                               |                      |                  N/A |
+[1,0]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,1]<stdout>:|   1  Tesla V100-PCIE...  On   | 00000000:2F:00.0 Off |                    0 |
+[1,1]<stdout>:| N/A   32C    P0    33W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,1]<stdout>:|                               |                      |                  N/A |
+[1,1]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,0]<stdout>:|   2  Tesla V100-PCIE...  On   | 00000000:86:00.0 Off |                    0 |
+[1,0]<stdout>:| N/A   33C    P0    34W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,0]<stdout>:|                               |                      |                  N/A |
+[1,0]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,1]<stdout>:|   2  Tesla V100-PCIE...  On   | 00000000:86:00.0 Off |                    0 |
+[1,1]<stdout>:| N/A   33C    P0    34W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,1]<stdout>:|                               |                      |                  N/A |
+[1,1]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,0]<stdout>:|   3  Tesla V100-PCIE...  On   | 00000000:D8:00.0 Off |                    0 |
+[1,0]<stdout>:| N/A   32C    P0    32W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,0]<stdout>:|                               |                      |                  N/A |
+[1,0]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,0]<stdout>:                                                                               
+[1,0]<stdout>:+-----------------------------------------------------------------------------+
+[1,0]<stdout>:| Processes:                                                                  |
+[1,0]<stdout>:|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+[1,0]<stdout>:|        ID   ID                                                   Usage      |
+[1,0]<stdout>:|=============================================================================|
+[1,1]<stdout>:|   3  Tesla V100-PCIE...  On   | 00000000:D8:00.0 Off |                    0 |
+[1,1]<stdout>:| N/A   32C    P0    32W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,1]<stdout>:|                               |                      |                  N/A |
+[1,1]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,1]<stdout>:                                                                               
+[1,1]<stdout>:+-----------------------------------------------------------------------------+
+[1,1]<stdout>:| Processes:                                                                  |
+[1,1]<stdout>:|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+[1,1]<stdout>:|        ID   ID                                                   Usage      |
+[1,1]<stdout>:|=============================================================================|
+[1,0]<stdout>:|    0   N/A  N/A   1292549      C   python                            529MiB |
+[1,1]<stdout>:|    0   N/A  N/A   1292549      C   python                            529MiB |
+[1,0]<stdout>:|    1   N/A  N/A   1292550      C   python                            529MiB |
+[1,1]<stdout>:|    1   N/A  N/A   1292550      C   python                            529MiB |
+[1,0]<stdout>:|    2   N/A  N/A   1292551      C   python                            529MiB |
+[1,1]<stdout>:|    2   N/A  N/A   1292551      C   python                            529MiB |
+[1,0]<stdout>:|    3   N/A  N/A   1292552      C   python                            529MiB |
+[1,0]<stdout>:+-----------------------------------------------------------------------------+
+[1,1]<stdout>:|    3   N/A  N/A   1292552      C   python                            529MiB |
+[1,1]<stdout>:+-----------------------------------------------------------------------------+
+[1,0]<stdout>:0
+[1,1]<stdout>:0
+[1,2]<stdout>:Tue Oct 18 20:51:44 2022       
+[1,2]<stdout>:+-----------------------------------------------------------------------------+
+[1,2]<stdout>:| NVIDIA-SMI 510.47.03    Driver Version: 510.47.03    CUDA Version: 11.6     |
+[1,2]<stdout>:|-------------------------------+----------------------+----------------------+
+[1,2]<stdout>:| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+[1,2]<stdout>:| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+[1,2]<stdout>:|                               |                      |               MIG M. |
+[1,2]<stdout>:|===============================+======================+======================|
+[1,2]<stdout>:|   0  Tesla V100-PCIE...  On   | 00000000:06:00.0 Off |                    0 |
+[1,2]<stdout>:| N/A   35C    P0    35W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,2]<stdout>:|                               |                      |                  N/A |
+[1,2]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,2]<stdout>:|   1  Tesla V100-PCIE...  On   | 00000000:2F:00.0 Off |                    0 |
+[1,2]<stdout>:| N/A   32C    P0    33W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,2]<stdout>:|                               |                      |                  N/A |
+[1,2]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,2]<stdout>:|   2  Tesla V100-PCIE...  On   | 00000000:86:00.0 Off |                    0 |
+[1,2]<stdout>:| N/A   33C    P0    34W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,2]<stdout>:|                               |                      |                  N/A |
+[1,2]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,2]<stdout>:|   3  Tesla V100-PCIE...  On   | 00000000:D8:00.0 Off |                    0 |
+[1,2]<stdout>:| N/A   32C    P0    32W / 250W |    533MiB / 32768MiB |      0%      Default |
+[1,2]<stdout>:|                               |                      |                  N/A |
+[1,2]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,2]<stdout>:                                                                               
+[1,2]<stdout>:+-----------------------------------------------------------------------------+
+[1,2]<stdout>:| Processes:                                                                  |
+[1,2]<stdout>:|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+[1,2]<stdout>:|        ID   ID                                                   Usage      |
+[1,2]<stdout>:|=============================================================================|
+[1,2]<stdout>:|    0   N/A  N/A   1292549      C   python                            529MiB |
+[1,2]<stdout>:|    1   N/A  N/A   1292550      C   python                            529MiB |
+[1,2]<stdout>:|    2   N/A  N/A   1292551      C   python                            529MiB |
+[1,2]<stdout>:|    3   N/A  N/A   1292552      C   python                            529MiB |
+[1,2]<stdout>:+-----------------------------------------------------------------------------+
+[1,0]<stdout>:Epoch 1/70
+[1,2]<stdout>:0
+[1,3]<stdout>:Tue Oct 18 20:58:54 2022       
+[1,3]<stdout>:+-----------------------------------------------------------------------------+
+[1,3]<stdout>:| NVIDIA-SMI 510.47.03    Driver Version: 510.47.03    CUDA Version: 11.6     |
+[1,3]<stdout>:|-------------------------------+----------------------+----------------------+
+[1,3]<stdout>:| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+[1,3]<stdout>:| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+[1,3]<stdout>:|                               |                      |               MIG M. |
+[1,3]<stdout>:|===============================+======================+======================|
+[1,3]<stdout>:|   0  Tesla V100-PCIE...  On   | 00000000:06:00.0 Off |                    0 |
+[1,3]<stdout>:| N/A   63C    P0    52W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,3]<stdout>:|                               |                      |                  N/A |
+[1,3]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,3]<stdout>:|   1  Tesla V100-PCIE...  On   | 00000000:2F:00.0 Off |                    0 |
+[1,3]<stdout>:| N/A   57C    P0    45W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,3]<stdout>:|                               |                      |                  N/A |
+[1,3]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,3]<stdout>:|   2  Tesla V100-PCIE...  On   | 00000000:86:00.0 Off |                    0 |
+[1,3]<stdout>:| N/A   59C    P0    48W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,3]<stdout>:|                               |                      |                  N/A |
+[1,3]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,3]<stdout>:|   3  Tesla V100-PCIE...  On   | 00000000:D8:00.0 Off |                    0 |
+[1,3]<stdout>:| N/A   56C    P0    43W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,3]<stdout>:|                               |                      |                  N/A |
+[1,3]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,3]<stdout>:                                                                               
+[1,3]<stdout>:+-----------------------------------------------------------------------------+
+[1,3]<stdout>:| Processes:                                                                  |
+[1,3]<stdout>:|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+[1,3]<stdout>:|        ID   ID                                                   Usage      |
+[1,3]<stdout>:|=============================================================================|
+[1,3]<stdout>:|    0   N/A  N/A   1292549      C   python                          31895MiB |
+[1,3]<stdout>:|    1   N/A  N/A   1292550      C   python                          31895MiB |
+[1,3]<stdout>:|    2   N/A  N/A   1292551      C   python                          31895MiB |
+[1,3]<stdout>:|    3   N/A  N/A   1292552      C   python                          31895MiB |
+[1,3]<stdout>:+-----------------------------------------------------------------------------+
+[1,3]<stdout>:0
+[1,2]<stdout>:Tue Oct 18 20:58:54 2022       
+[1,2]<stdout>:+-----------------------------------------------------------------------------+
+[1,2]<stdout>:| NVIDIA-SMI 510.47.03    Driver Version: 510.47.03    CUDA Version: 11.6     |
+[1,2]<stdout>:|-------------------------------+----------------------+----------------------+
+[1,2]<stdout>:| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+[1,2]<stdout>:| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+[1,2]<stdout>:|                               |                      |               MIG M. |
+[1,2]<stdout>:|===============================+======================+======================|
+[1,1]<stdout>:Tue Oct 18 20:58:54 2022       
+[1,1]<stdout>:+-----------------------------------------------------------------------------+
+[1,1]<stdout>:| NVIDIA-SMI 510.47.03    Driver Version: 510.47.03    CUDA Version: 11.6     |
+[1,1]<stdout>:|-------------------------------+----------------------+----------------------+
+[1,1]<stdout>:| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+[1,1]<stdout>:| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+[1,1]<stdout>:|                               |                      |               MIG M. |
+[1,1]<stdout>:|===============================+======================+======================|
+[1,0]<stdout>:Tue Oct 18 20:58:54 2022       
+[1,0]<stdout>:+-----------------------------------------------------------------------------+
+[1,0]<stdout>:| NVIDIA-SMI 510.47.03    Driver Version: 510.47.03    CUDA Version: 11.6     |
+[1,0]<stdout>:|-------------------------------+----------------------+----------------------+
+[1,0]<stdout>:| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+[1,0]<stdout>:| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+[1,0]<stdout>:|                               |                      |               MIG M. |
+[1,0]<stdout>:|===============================+======================+======================|
+[1,1]<stdout>:|   0  Tesla V100-PCIE...  On   | 00000000:06:00.0 Off |                    0 |
+[1,1]<stdout>:| N/A   62C    P0    52W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,1]<stdout>:|                               |                      |                  N/A |
+[1,1]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,2]<stdout>:|   0  Tesla V100-PCIE...  On   | 00000000:06:00.0 Off |                    0 |
+[1,2]<stdout>:| N/A   62C    P0    52W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,2]<stdout>:|                               |                      |                  N/A |
+[1,2]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,0]<stdout>:|   0  Tesla V100-PCIE...  On   | 00000000:06:00.0 Off |                    0 |
+[1,0]<stdout>:| N/A   62C    P0    52W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,0]<stdout>:|                               |                      |                  N/A |
+[1,0]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,0]<stdout>:|   1  Tesla V100-PCIE...  On   | 00000000:2F:00.0 Off |                    0 |
+[1,0]<stdout>:| N/A   56C    P0    45W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,0]<stdout>:|                               |                      |                  N/A |
+[1,0]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,2]<stdout>:|   1  Tesla V100-PCIE...  On   | 00000000:2F:00.0 Off |                    0 |
+[1,2]<stdout>:| N/A   56C    P0    45W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,2]<stdout>:|                               |                      |                  N/A |
+[1,2]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,1]<stdout>:|   1  Tesla V100-PCIE...  On   | 00000000:2F:00.0 Off |                    0 |
+[1,1]<stdout>:| N/A   56C    P0    45W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,1]<stdout>:|                               |                      |                  N/A |
+[1,1]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,0]<stdout>:|   2  Tesla V100-PCIE...  On   | 00000000:86:00.0 Off |                    0 |
+[1,0]<stdout>:| N/A   59C    P0    48W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,0]<stdout>:|                               |                      |                  N/A |
+[1,0]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,2]<stdout>:|   2  Tesla V100-PCIE...  On   | 00000000:86:00.0 Off |                    0 |
+[1,2]<stdout>:| N/A   59C    P0    48W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,2]<stdout>:|                               |                      |                  N/A |
+[1,2]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,1]<stdout>:|   2  Tesla V100-PCIE...  On   | 00000000:86:00.0 Off |                    0 |
+[1,1]<stdout>:| N/A   59C    P0    48W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,1]<stdout>:|                               |                      |                  N/A |
+[1,1]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,1]<stdout>:|   3  Tesla V100-PCIE...  On   | 00000000:D8:00.0 Off |                    0 |
+[1,1]<stdout>:| N/A   55C    P0    43W / 250W |  31899MiB / 32768MiB |      1%      Default |
+[1,1]<stdout>:|                               |                      |                  N/A |
+[1,1]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,2]<stdout>:|   3  Tesla V100-PCIE...  On   | 00000000:D8:00.0 Off |                    0 |
+[1,2]<stdout>:| N/A   55C    P0    43W / 250W |  31899MiB / 32768MiB |      1%      Default |
+[1,2]<stdout>:|                               |                      |                  N/A |
+[1,2]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,2]<stdout>:                                                                               
+[1,2]<stdout>:+-----------------------------------------------------------------------------+
+[1,2]<stdout>:| Processes:                                                                  |
+[1,2]<stdout>:|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+[1,2]<stdout>:|        ID   ID                                                   Usage      |
+[1,2]<stdout>:|=============================================================================|
+[1,0]<stdout>:|   3  Tesla V100-PCIE...  On   | 00000000:D8:00.0 Off |                    0 |
+[1,0]<stdout>:| N/A   55C    P0    43W / 250W |  31899MiB / 32768MiB |      1%      Default |
+[1,0]<stdout>:|                               |                      |                  N/A |
+[1,0]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,1]<stdout>:                                                                               
+[1,1]<stdout>:+-----------------------------------------------------------------------------+
+[1,1]<stdout>:| Processes:                                                                  |
+[1,1]<stdout>:|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+[1,1]<stdout>:|        ID   ID                                                   Usage      |
+[1,1]<stdout>:|=============================================================================|
+[1,0]<stdout>:                                                                               
+[1,0]<stdout>:+-----------------------------------------------------------------------------+
+[1,0]<stdout>:| Processes:                                                                  |
+[1,0]<stdout>:|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+[1,0]<stdout>:|        ID   ID                                                   Usage      |
+[1,0]<stdout>:|=============================================================================|
+[1,1]<stdout>:|    0   N/A  N/A   1292549      C   python                          31895MiB |
+[1,2]<stdout>:|    0   N/A  N/A   1292549      C   python                          31895MiB |
+[1,0]<stdout>:|    0   N/A  N/A   1292549      C   python                          31895MiB |
+[1,2]<stdout>:|    1   N/A  N/A   1292550      C   python                          31895MiB |
+[1,1]<stdout>:|    1   N/A  N/A   1292550      C   python                          31895MiB |
+[1,0]<stdout>:|    1   N/A  N/A   1292550      C   python                          31895MiB |
+[1,2]<stdout>:|    2   N/A  N/A   1292551      C   python                          31895MiB |
+[1,1]<stdout>:|    2   N/A  N/A   1292551      C   python                          31895MiB |
+[1,0]<stdout>:|    2   N/A  N/A   1292551      C   python                          31895MiB |
+[1,2]<stdout>:|    3   N/A  N/A   1292552      C   python                          31895MiB |
+[1,2]<stdout>:+-----------------------------------------------------------------------------+
+[1,0]<stdout>:|    3   N/A  N/A   1292552      C   python                          31895MiB |
+[1,0]<stdout>:+-----------------------------------------------------------------------------+
+[1,1]<stdout>:|    3   N/A  N/A   1292552      C   python                          31895MiB |
+[1,1]<stdout>:+-----------------------------------------------------------------------------+
+[1,1]<stdout>:0
+[1,0]<stdout>:0
+[1,2]<stdout>:0
+[1,0]<stdout>:399/399 - 486s - loss: 1.6211 - accuracy: 0.3521 - val_loss: 1.5234 - val_accuracy: 0.3801 - lr: 5.0000e-04 - 486s/epoch - 1s/step
+[1,0]<stdout>:Epoch 2/70
+[1,0]<stdout>:399/399 - 466s - loss: 1.3347 - accuracy: 0.4787 - val_loss: 1.3460 - val_accuracy: 0.4851 - lr: 5.0000e-04 - 466s/epoch - 1s/step
+[1,0]<stdout>:Epoch 3/70
+[1,0]<stdout>:399/399 - 467s - loss: 1.2545 - accuracy: 0.5133 - val_loss: 1.2466 - val_accuracy: 0.5371 - lr: 5.0000e-04 - 467s/epoch - 1s/step
+[1,0]<stdout>:Epoch 4/70
+[1,0]<stdout>:399/399 - 463s - loss: 1.1857 - accuracy: 0.5379 - val_loss: 1.2811 - val_accuracy: 0.4929 - lr: 5.0000e-04 - 463s/epoch - 1s/step
+[1,0]<stdout>:Epoch 5/70
+[1,0]<stdout>:399/399 - 461s - loss: 1.1321 - accuracy: 0.5541 - val_loss: 1.2946 - val_accuracy: 0.4631 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 6/70
+[1,0]<stdout>:399/399 - 467s - loss: 1.0993 - accuracy: 0.5683 - val_loss: 1.1701 - val_accuracy: 0.5643 - lr: 5.0000e-04 - 467s/epoch - 1s/step
+[1,0]<stdout>:Epoch 7/70
+[1,0]<stdout>:399/399 - 466s - loss: 1.0686 - accuracy: 0.5750 - val_loss: 1.1089 - val_accuracy: 0.5572 - lr: 5.0000e-04 - 466s/epoch - 1s/step
+[1,0]<stdout>:Epoch 8/70
+[1,0]<stdout>:399/399 - 466s - loss: 1.0418 - accuracy: 0.5892 - val_loss: 1.1015 - val_accuracy: 0.5798 - lr: 5.0000e-04 - 466s/epoch - 1s/step
+[1,0]<stdout>:Epoch 9/70
+[1,0]<stdout>:399/399 - 467s - loss: 1.0156 - accuracy: 0.6009 - val_loss: 1.0641 - val_accuracy: 0.5891 - lr: 5.0000e-04 - 467s/epoch - 1s/step
+[1,0]<stdout>:Epoch 10/70
+[1,0]<stdout>:399/399 - 463s - loss: 0.9971 - accuracy: 0.6115 - val_loss: 1.1094 - val_accuracy: 0.5574 - lr: 5.0000e-04 - 463s/epoch - 1s/step
+[1,0]<stdout>:Epoch 11/70
+[1,0]<stdout>:399/399 - 468s - loss: 0.9676 - accuracy: 0.6183 - val_loss: 1.0601 - val_accuracy: 0.5911 - lr: 5.0000e-04 - 468s/epoch - 1s/step
+[1,0]<stdout>:Epoch 12/70
+[1,0]<stdout>:399/399 - 467s - loss: 0.9554 - accuracy: 0.6263 - val_loss: 1.0265 - val_accuracy: 0.6136 - lr: 5.0000e-04 - 467s/epoch - 1s/step
+[1,0]<stdout>:Epoch 13/70
+[1,0]<stdout>:399/399 - 464s - loss: 0.9351 - accuracy: 0.6355 - val_loss: 1.0812 - val_accuracy: 0.5796 - lr: 5.0000e-04 - 464s/epoch - 1s/step
+[1,0]<stdout>:Epoch 14/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.9063 - accuracy: 0.6465 - val_loss: 1.0438 - val_accuracy: 0.6123 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 15/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.8880 - accuracy: 0.6538 - val_loss: 1.0490 - val_accuracy: 0.6016 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 16/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.8697 - accuracy: 0.6590 - val_loss: 1.0478 - val_accuracy: 0.6001 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 17/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.8541 - accuracy: 0.6678 - val_loss: 1.0439 - val_accuracy: 0.6092 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 18/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.8327 - accuracy: 0.6749 - val_loss: 1.0469 - val_accuracy: 0.5951 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 19/70
+[1,0]<stdout>:399/399 - 523s - loss: 0.8171 - accuracy: 0.6833 - val_loss: 1.0087 - val_accuracy: 0.6225 - lr: 5.0000e-04 - 523s/epoch - 1s/step
+[1,0]<stdout>:Epoch 20/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.8003 - accuracy: 0.6880 - val_loss: 1.0597 - val_accuracy: 0.6068 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 21/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.7698 - accuracy: 0.7006 - val_loss: 1.0249 - val_accuracy: 0.6128 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 22/70
+[1,0]<stdout>:399/399 - 468s - loss: 0.7556 - accuracy: 0.7053 - val_loss: 1.0889 - val_accuracy: 0.6012 - lr: 5.0000e-04 - 468s/epoch - 1s/step
+[1,0]<stdout>:Epoch 23/70
+[1,0]<stdout>:399/399 - 464s - loss: 0.7392 - accuracy: 0.7142 - val_loss: 1.0627 - val_accuracy: 0.6087 - lr: 5.0000e-04 - 464s/epoch - 1s/step
+[1,0]<stdout>:Epoch 24/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.7178 - accuracy: 0.7254 - val_loss: 1.0723 - val_accuracy: 0.6140 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 25/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.7060 - accuracy: 0.7260 - val_loss: 1.1020 - val_accuracy: 0.6110 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 26/70
+[1,0]<stdout>:399/399 - 462s - loss: 0.6821 - accuracy: 0.7355 - val_loss: 1.0669 - val_accuracy: 0.6255 - lr: 5.0000e-04 - 462s/epoch - 1s/step
+[1,0]<stdout>:Epoch 27/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.6704 - accuracy: 0.7432 - val_loss: 1.0727 - val_accuracy: 0.6106 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 28/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.6579 - accuracy: 0.7471 - val_loss: 1.0410 - val_accuracy: 0.6172 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 29/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.6343 - accuracy: 0.7556 - val_loss: 1.0983 - val_accuracy: 0.6112 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 30/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.6229 - accuracy: 0.7577 - val_loss: 1.0651 - val_accuracy: 0.6208 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 31/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.5999 - accuracy: 0.7675 - val_loss: 1.1187 - val_accuracy: 0.6328 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 32/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.5939 - accuracy: 0.7699 - val_loss: 1.1948 - val_accuracy: 0.6129 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 33/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.5775 - accuracy: 0.7773 - val_loss: 1.1161 - val_accuracy: 0.6121 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 34/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.5574 - accuracy: 0.7835 - val_loss: 1.1613 - val_accuracy: 0.6066 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 35/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.5423 - accuracy: 0.7903 - val_loss: 1.2303 - val_accuracy: 0.6181 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 36/70
+[1,0]<stdout>:399/399 - 465s - loss: 0.5224 - accuracy: 0.7979 - val_loss: 1.2672 - val_accuracy: 0.6024 - lr: 5.0000e-04 - 465s/epoch - 1s/step
+[1,0]<stdout>:Epoch 37/70
+[1,0]<stdout>:399/399 - 471s - loss: 0.5092 - accuracy: 0.8025 - val_loss: 1.2235 - val_accuracy: 0.6227 - lr: 5.0000e-04 - 471s/epoch - 1s/step
+[1,0]<stdout>:Epoch 38/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.4968 - accuracy: 0.8056 - val_loss: 1.2140 - val_accuracy: 0.6190 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 39/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.4906 - accuracy: 0.8109 - val_loss: 1.3057 - val_accuracy: 0.6132 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 40/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.4616 - accuracy: 0.8230 - val_loss: 1.3687 - val_accuracy: 0.6151 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 41/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.4549 - accuracy: 0.8279 - val_loss: 1.3807 - val_accuracy: 0.5983 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 42/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.4508 - accuracy: 0.8238 - val_loss: 1.3272 - val_accuracy: 0.6058 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 43/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.4180 - accuracy: 0.8384 - val_loss: 1.3961 - val_accuracy: 0.6161 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 44/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.4216 - accuracy: 0.8389 - val_loss: 1.3805 - val_accuracy: 0.6218 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 45/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.4042 - accuracy: 0.8440 - val_loss: 1.4053 - val_accuracy: 0.6075 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 46/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.3787 - accuracy: 0.8540 - val_loss: 1.4443 - val_accuracy: 0.6076 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 47/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.3699 - accuracy: 0.8571 - val_loss: 1.4803 - val_accuracy: 0.6133 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 48/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.3643 - accuracy: 0.8582 - val_loss: 1.5430 - val_accuracy: 0.6195 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 49/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.3494 - accuracy: 0.8649 - val_loss: 1.5002 - val_accuracy: 0.6129 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 50/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.3426 - accuracy: 0.8689 - val_loss: 1.5767 - val_accuracy: 0.6206 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 51/70
+[1,0]<stdout>:399/399 - 462s - loss: 0.3228 - accuracy: 0.8731 - val_loss: 1.5047 - val_accuracy: 0.6131 - lr: 5.0000e-04 - 462s/epoch - 1s/step
+[1,0]<stdout>:Epoch 52/70
+[1,0]<stdout>:399/399 - 482s - loss: 0.3243 - accuracy: 0.8775 - val_loss: 1.5221 - val_accuracy: 0.6149 - lr: 5.0000e-04 - 482s/epoch - 1s/step
+[1,0]<stdout>:Epoch 53/70
+[1,0]<stdout>:399/399 - 474s - loss: 0.3016 - accuracy: 0.8844 - val_loss: 1.6369 - val_accuracy: 0.6188 - lr: 5.0000e-04 - 474s/epoch - 1s/step
+[1,0]<stdout>:Epoch 54/70
+[1,0]<stdout>:399/399 - 465s - loss: 0.3054 - accuracy: 0.8810 - val_loss: 1.4963 - val_accuracy: 0.6236 - lr: 5.0000e-04 - 465s/epoch - 1s/step
+[1,0]<stdout>:Epoch 55/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.2959 - accuracy: 0.8861 - val_loss: 1.7204 - val_accuracy: 0.6181 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 56/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.2851 - accuracy: 0.8909 - val_loss: 1.7324 - val_accuracy: 0.5994 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 57/70
+[1,0]<stdout>:399/399 - 468s - loss: 0.2728 - accuracy: 0.8957 - val_loss: 1.7242 - val_accuracy: 0.6086 - lr: 5.0000e-04 - 468s/epoch - 1s/step
+[1,0]<stdout>:Epoch 58/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.2598 - accuracy: 0.9015 - val_loss: 1.6878 - val_accuracy: 0.6184 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 59/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.2566 - accuracy: 0.9016 - val_loss: 1.6833 - val_accuracy: 0.6101 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 60/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.2459 - accuracy: 0.9058 - val_loss: 1.8023 - val_accuracy: 0.5840 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 61/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.2451 - accuracy: 0.9061 - val_loss: 1.7227 - val_accuracy: 0.6162 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 62/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.2408 - accuracy: 0.9083 - val_loss: 1.7754 - val_accuracy: 0.6253 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 63/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.2309 - accuracy: 0.9133 - val_loss: 1.7997 - val_accuracy: 0.6131 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 64/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.2278 - accuracy: 0.9126 - val_loss: 1.8174 - val_accuracy: 0.6198 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 65/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.2094 - accuracy: 0.9205 - val_loss: 1.8245 - val_accuracy: 0.6040 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 66/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.2193 - accuracy: 0.9160 - val_loss: 1.8101 - val_accuracy: 0.6014 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 67/70
+[1,0]<stdout>:399/399 - 461s - loss: 0.2031 - accuracy: 0.9243 - val_loss: 1.8892 - val_accuracy: 0.6070 - lr: 5.0000e-04 - 461s/epoch - 1s/step
+[1,0]<stdout>:Epoch 68/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.1990 - accuracy: 0.9256 - val_loss: 1.9442 - val_accuracy: 0.6155 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:Epoch 69/70
+[1,0]<stdout>:399/399 - 463s - loss: 0.1958 - accuracy: 0.9260 - val_loss: 1.8336 - val_accuracy: 0.6098 - lr: 5.0000e-04 - 463s/epoch - 1s/step
+[1,0]<stdout>:Epoch 70/70
+[1,0]<stdout>:399/399 - 460s - loss: 0.1908 - accuracy: 0.9283 - val_loss: 1.8403 - val_accuracy: 0.6238 - lr: 5.0000e-04 - 460s/epoch - 1s/step
+[1,0]<stdout>:train time:  32462.83509540558
+[1,0]<stdout>:Wed Oct 19 05:52:47 2022       
+[1,0]<stdout>:+-----------------------------------------------------------------------------+
+[1,0]<stdout>:| NVIDIA-SMI 510.47.03    Driver Version: 510.47.03    CUDA Version: 11.6     |
+[1,0]<stdout>:|-------------------------------+----------------------+----------------------+
+[1,0]<stdout>:| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+[1,0]<stdout>:| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+[1,0]<stdout>:|                               |                      |               MIG M. |
+[1,0]<stdout>:|===============================+======================+======================|
+[1,0]<stdout>:|   0  Tesla V100-PCIE...  On   | 00000000:06:00.0 Off |                    0 |
+[1,0]<stdout>:| N/A   63C    P0    52W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,0]<stdout>:|                               |                      |                  N/A |
+[1,0]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,0]<stdout>:|   1  Tesla V100-PCIE...  On   | 00000000:2F:00.0 Off |                    0 |
+[1,0]<stdout>:| N/A   56C    P0    45W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,0]<stdout>:|                               |                      |                  N/A |
+[1,0]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,0]<stdout>:|   2  Tesla V100-PCIE...  On   | 00000000:86:00.0 Off |                    0 |
+[1,0]<stdout>:| N/A   60C    P0    48W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,0]<stdout>:|                               |                      |                  N/A |
+[1,0]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,0]<stdout>:|   3  Tesla V100-PCIE...  On   | 00000000:D8:00.0 Off |                    0 |
+[1,0]<stdout>:| N/A   56C    P0    43W / 250W |  31899MiB / 32768MiB |      0%      Default |
+[1,0]<stdout>:|                               |                      |                  N/A |
+[1,0]<stdout>:+-------------------------------+----------------------+----------------------+
+[1,0]<stdout>:                                                                               
+[1,0]<stdout>:+-----------------------------------------------------------------------------+
+[1,0]<stdout>:| Processes:                                                                  |
+[1,0]<stdout>:|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+[1,0]<stdout>:|        ID   ID                                                   Usage      |
+[1,0]<stdout>:|=============================================================================|
+[1,0]<stdout>:|    0   N/A  N/A   1292549      C   python                          31895MiB |
+[1,0]<stdout>:|    1   N/A  N/A   1292550      C   python                          31895MiB |
+[1,0]<stdout>:|    2   N/A  N/A   1292551      C   python                          31895MiB |
+[1,0]<stdout>:|    3   N/A  N/A   1292552      C   python                          31895MiB |
+[1,0]<stdout>:+-----------------------------------------------------------------------------+
+[1,0]<stdout>:0
+[1,0]<stdout>:  1/114 [..............................] - ETA: 1:05 - loss: 1.2931 - accuracy: 0.5625[1,0]<stdout>:  2/114 [..............................] - ETA: 55s - loss: 1.3266 - accuracy: 0.6562 [1,0]<stdout>:  3/114 [..............................] - ETA: 1:08 - loss: 1.3657 - accuracy: 0.6250[1,0]<stdout>:  4/114 [>.............................] - ETA: 1:07 - loss: 1.3119 - accuracy: 0.6406[1,0]<stdout>:  5/114 [>.............................] - ETA: 1:06 - loss: 1.4072 - accuracy: 0.6500[1,0]<stdout>:  6/114 [>.............................] - ETA: 1:03 - loss: 1.7073 - accuracy: 0.6250[1,0]<stdout>:  7/114 [>.............................] - ETA: 1:03 - loss: 1.9067 - accuracy: 0.6161[1,0]<stdout>:  8/114 [=>............................] - ETA: 1:04 - loss: 1.8745 - accuracy: 0.6016[1,0]<stdout>:  9/114 [=>............................] - ETA: 1:04 - loss: 1.8098 - accuracy: 0.6250[1,0]<stdout>: 10/114 [=>............................] - ETA: 1:04 - loss: 1.8243 - accuracy: 0.6250[1,0]<stdout>: 11/114 [=>............................] - ETA: 1:03 - loss: 1.8407 - accuracy: 0.6364[1,0]<stdout>: 12/114 [==>...........................] - ETA: 1:03 - loss: 1.7839 - accuracy: 0.6458[1,0]<stdout>: 13/114 [==>...........................] - ETA: 1:02 - loss: 1.7919 - accuracy: 0.6490[1,0]<stdout>: 14/114 [==>...........................] - ETA: 1:01 - loss: 1.7530 - accuracy: 0.6518[1,0]<stdout>: 15/114 [==>...........................] - ETA: 1:01 - loss: 1.7494 - accuracy: 0.6542[1,0]<stdout>: 16/114 [===>..........................] - ETA: 1:00 - loss: 1.7260 - accuracy: 0.6562[1,0]<stdout>: 17/114 [===>..........................] - ETA: 59s - loss: 1.6913 - accuracy: 0.6618 [1,0]<stdout>: 18/114 [===>..........................] - ETA: 59s - loss: 1.7103 - accuracy: 0.6562[1,0]<stdout>: 19/114 [====>.........................] - ETA: 58s - loss: 1.7382 - accuracy: 0.6546[1,0]<stdout>: 20/114 [====>.........................] - ETA: 57s - loss: 1.7402 - accuracy: 0.6531[1,0]<stdout>: 21/114 [====>.........................] - ETA: 57s - loss: 1.7271 - accuracy: 0.6458[1,0]<stdout>: 22/114 [====>.........................] - ETA: 56s - loss: 1.7536 - accuracy: 0.6420[1,0]<stdout>: 23/114 [=====>........................] - ETA: 55s - loss: 1.7580 - accuracy: 0.6359[1,0]<stdout>: 24/114 [=====>........................] - ETA: 55s - loss: 1.7304 - accuracy: 0.6406[1,0]<stdout>: 25/114 [=====>........................] - ETA: 54s - loss: 1.7432 - accuracy: 0.6450[1,0]<stdout>: 26/114 [=====>........................] - ETA: 53s - loss: 1.6992 - accuracy: 0.6490[1,0]<stdout>: 27/114 [======>.......................] - ETA: 53s - loss: 1.7712 - accuracy: 0.6412[1,0]<stdout>: 28/114 [======>.......................] - ETA: 52s - loss: 1.8013 - accuracy: 0.6295[1,0]<stdout>: 29/114 [======>.......................] - ETA: 52s - loss: 1.7561 - accuracy: 0.6379[1,0]<stdout>: 30/114 [======>.......................] - ETA: 51s - loss: 1.7771 - accuracy: 0.6375[1,0]<stdout>: 31/114 [=======>......................] - ETA: 50s - loss: 1.7986 - accuracy: 0.6290[1,0]<stdout>: 32/114 [=======>......................] - ETA: 50s - loss: 1.8239 - accuracy: 0.6289[1,0]<stdout>: 33/114 [=======>......................] - ETA: 49s - loss: 1.8133 - accuracy: 0.6345[1,0]<stdout>: 34/114 [=======>......................] - ETA: 48s - loss: 1.7899 - accuracy: 0.6379[1,0]<stdout>: 35/114 [========>.....................] - ETA: 48s - loss: 1.8038 - accuracy: 0.6357[1,0]<stdout>: 36/114 [========>.....................] - ETA: 47s - loss: 1.8130 - accuracy: 0.6285[1,0]<stdout>: 37/114 [========>.....................] - ETA: 46s - loss: 1.7862 - accuracy: 0.6301[1,0]<stdout>: 38/114 [=========>....................] - ETA: 46s - loss: 1.7697 - accuracy: 0.6349[1,0]<stdout>: 39/114 [=========>....................] - ETA: 45s - loss: 1.7674 - accuracy: 0.6330[1,0]<stdout>: 40/114 [=========>....................] - ETA: 45s - loss: 1.7541 - accuracy: 0.6344[1,0]<stdout>: 41/114 [=========>....................] - ETA: 44s - loss: 1.7636 - accuracy: 0.6326[1,0]<stdout>: 42/114 [==========>...................] - ETA: 43s - loss: 1.7891 - accuracy: 0.6280[1,0]<stdout>: 43/114 [==========>...................] - ETA: 43s - loss: 1.7849 - accuracy: 0.6265[1,0]<stdout>: 44/114 [==========>...................] - ETA: 42s - loss: 1.7729 - accuracy: 0.6250[1,0]<stdout>: 45/114 [==========>...................] - ETA: 42s - loss: 1.7717 - accuracy: 0.6250[1,0]<stdout>: 46/114 [===========>..................] - ETA: 41s - loss: 1.7507 - accuracy: 0.6264[1,0]<stdout>: 47/114 [===========>..................] - ETA: 41s - loss: 1.7626 - accuracy: 0.6250[1,0]<stdout>: 48/114 [===========>..................] - ETA: 40s - loss: 1.7948 - accuracy: 0.6211[1,0]<stdout>: 49/114 [===========>..................] - ETA: 39s - loss: 1.8002 - accuracy: 0.6212[1,0]<stdout>: 50/114 [============>.................] - ETA: 39s - loss: 1.7994 - accuracy: 0.6175[1,0]<stdout>: 51/114 [============>.................] - ETA: 38s - loss: 1.7875 - accuracy: 0.6201[1,0]<stdout>: 52/114 [============>.................] - ETA: 38s - loss: 1.7810 - accuracy: 0.6226[1,0]<stdout>: 53/114 [============>.................] - ETA: 37s - loss: 1.7891 - accuracy: 0.6215[1,0]<stdout>: 54/114 [=============>................] - ETA: 36s - loss: 1.7869 - accuracy: 0.6238[1,0]<stdout>: 55/114 [=============>................] - ETA: 36s - loss: 1.7909 - accuracy: 0.6227[1,0]<stdout>: 56/114 [=============>................] - ETA: 35s - loss: 1.8031 - accuracy: 0.6194[1,0]<stdout>: 57/114 [==============>...............] - ETA: 34s - loss: 1.7910 - accuracy: 0.6228[1,0]<stdout>: 58/114 [==============>...............] - ETA: 34s - loss: 1.8008 - accuracy: 0.6196[1,0]<stdout>: 59/114 [==============>...............] - ETA: 33s - loss: 1.7850 - accuracy: 0.6239[1,0]<stdout>: 60/114 [==============>...............] - ETA: 33s - loss: 1.7680 - accuracy: 0.6271[1,0]<stdout>: 61/114 [===============>..............] - ETA: 32s - loss: 1.7705 - accuracy: 0.6260[1,0]<stdout>: 62/114 [===============>..............] - ETA: 32s - loss: 1.7555 - accuracy: 0.6290[1,0]<stdout>: 63/114 [===============>..............] - ETA: 31s - loss: 1.7673 - accuracy: 0.6290[1,0]<stdout>: 64/114 [===============>..............] - ETA: 30s - loss: 1.7605 - accuracy: 0.6270[1,0]<stdout>: 65/114 [================>.............] - ETA: 30s - loss: 1.7458 - accuracy: 0.6288[1,0]<stdout>: 66/114 [================>.............] - ETA: 29s - loss: 1.7692 - accuracy: 0.6278[1,0]<stdout>: 67/114 [================>.............] - ETA: 28s - loss: 1.7721 - accuracy: 0.6259[1,0]<stdout>: 68/114 [================>.............] - ETA: 28s - loss: 1.7951 - accuracy: 0.6250[1,0]<stdout>: 69/114 [=================>............] - ETA: 27s - loss: 1.8046 - accuracy: 0.6214[1,0]<stdout>: 70/114 [=================>............] - ETA: 27s - loss: 1.7976 - accuracy: 0.6241[1,0]<stdout>: 71/114 [=================>............] - ETA: 26s - loss: 1.7989 - accuracy: 0.6241[1,0]<stdout>: 72/114 [=================>............] - ETA: 25s - loss: 1.7978 - accuracy: 0.6241[1,0]<stdout>: 73/114 [==================>...........] - ETA: 25s - loss: 1.8030 - accuracy: 0.6233[1,0]<stdout>: 74/114 [==================>...........] - ETA: 24s - loss: 1.8015 - accuracy: 0.6225[1,0]<stdout>: 75/114 [==================>...........] - ETA: 23s - loss: 1.8060 - accuracy: 0.6217[1,0]<stdout>: 76/114 [===================>..........] - ETA: 23s - loss: 1.8109 - accuracy: 0.6201[1,0]<stdout>: 77/114 [===================>..........] - ETA: 22s - loss: 1.8017 - accuracy: 0.6201[1,0]<stdout>: 78/114 [===================>..........] - ETA: 22s - loss: 1.7947 - accuracy: 0.6218[1,0]<stdout>: 79/114 [===================>..........] - ETA: 21s - loss: 1.7986 - accuracy: 0.6203[1,0]<stdout>: 80/114 [====================>.........] - ETA: 20s - loss: 1.7977 - accuracy: 0.6203[1,0]<stdout>: 81/114 [====================>.........] - ETA: 20s - loss: 1.8000 - accuracy: 0.6211[1,0]<stdout>: 82/114 [====================>.........] - ETA: 19s - loss: 1.7865 - accuracy: 0.6235[1,0]<stdout>: 83/114 [====================>.........] - ETA: 19s - loss: 1.7786 - accuracy: 0.6250[1,0]<stdout>: 84/114 [=====================>........] - ETA: 18s - loss: 1.7948 - accuracy: 0.6213[1,0]<stdout>: 85/114 [=====================>........] - ETA: 17s - loss: 1.8001 - accuracy: 0.6213[1,0]<stdout>: 86/114 [=====================>........] - ETA: 17s - loss: 1.8130 - accuracy: 0.6214[1,0]<stdout>: 87/114 [=====================>........] - ETA: 16s - loss: 1.8104 - accuracy: 0.6200[1,0]<stdout>: 88/114 [======================>.......] - ETA: 15s - loss: 1.8029 - accuracy: 0.6200[1,0]<stdout>: 89/114 [======================>.......] - ETA: 15s - loss: 1.7948 - accuracy: 0.6194[1,0]<stdout>: 90/114 [======================>.......] - ETA: 14s - loss: 1.8048 - accuracy: 0.6194[1,0]<stdout>: 91/114 [======================>.......] - ETA: 14s - loss: 1.8033 - accuracy: 0.6188[1,0]<stdout>: 92/114 [=======================>......] - ETA: 13s - loss: 1.7983 - accuracy: 0.6189[1,0]<stdout>: 93/114 [=======================>......] - ETA: 12s - loss: 1.7927 - accuracy: 0.6183[1,0]<stdout>: 94/114 [=======================>......] - ETA: 12s - loss: 1.7875 - accuracy: 0.6197[1,0]<stdout>: 95/114 [========================>.....] - ETA: 11s - loss: 1.7951 - accuracy: 0.6197[1,0]<stdout>: 96/114 [========================>.....] - ETA: 11s - loss: 1.8061 - accuracy: 0.6178[1,0]<stdout>: 97/114 [========================>.....] - ETA: 10s - loss: 1.8002 - accuracy: 0.6186[1,0]<stdout>: 98/114 [========================>.....] - ETA: 9s - loss: 1.7969 - accuracy: 0.6173 [1,0]<stdout>: 99/114 [=========================>....] - ETA: 9s - loss: 1.7898 - accuracy: 0.6181[1,0]<stdout>:100/114 [=========================>....] - ETA: 8s - loss: 1.8073 - accuracy: 0.6162[1,0]<stdout>:101/114 [=========================>....] - ETA: 7s - loss: 1.8060 - accuracy: 0.6170[1,0]<stdout>:102/114 [=========================>....] - ETA: 7s - loss: 1.8163 - accuracy: 0.6146[1,0]<stdout>:103/114 [==========================>...] - ETA: 6s - loss: 1.8121 - accuracy: 0.6159[1,0]<stdout>:104/114 [==========================>...] - ETA: 6s - loss: 1.8148 - accuracy: 0.6172[1,0]<stdout>:105/114 [==========================>...] - ETA: 5s - loss: 1.8196 - accuracy: 0.6155[1,0]<stdout>:106/114 [==========================>...] - ETA: 4s - loss: 1.8214 - accuracy: 0.6144[1,0]<stdout>:107/114 [===========================>..] - ETA: 4s - loss: 1.8225 - accuracy: 0.6139[1,0]<stdout>:108/114 [===========================>..] - ETA: 3s - loss: 1.8285 - accuracy: 0.6128[1,0]<stdout>:109/114 [===========================>..] - ETA: 3s - loss: 1.8175 - accuracy: 0.6135[1,0]<stdout>:110/114 [===========================>..] - ETA: 2s - loss: 1.8119 - accuracy: 0.6142[1,0]<stdout>:111/114 [============================>.] - ETA: 1s - loss: 1.8158 - accuracy: 0.6149[1,0]<stdout>:112/114 [============================>.] - ETA: 1s - loss: 1.8144 - accuracy: 0.6155[1,0]<stdout>:113/114 [============================>.] - ETA: 0s - loss: 1.8014 - accuracy: 0.6178[1,0]<stdout>:114/114 [==============================] - ETA: 0s - loss: 1.8120 - accuracy: 0.6162[1,0]<stdout>:114/114 [==============================] - 70s 617ms/step - loss: 1.8120 - accuracy: 0.6162
+[1,0]<stdout>:Accuracy of our model on test data :  61.622804403305054 %
+[1,0]<stdout>:              precision    recall  f1-score   support
+[1,0]<stdout>:
+[1,0]<stdout>:       angry       0.72      0.76      0.74       284
+[1,0]<stdout>:        calm       0.90      0.63      0.75        30
+[1,0]<stdout>:     disgust       0.51      0.61      0.56       289
+[1,0]<stdout>:        fear       0.59      0.51      0.54       289
+[1,0]<stdout>:       happy       0.58      0.57      0.58       289
+[1,0]<stdout>:     neutral       0.62      0.55      0.59       256
+[1,0]<stdout>:         sad       0.59      0.61      0.60       289
+[1,0]<stdout>:    surprise       0.86      0.84      0.85        99
+[1,0]<stdout>:
+[1,0]<stdout>:    accuracy                           0.62      1825
+[1,0]<stdout>:   macro avg       0.67      0.64      0.65      1825
+[1,0]<stdout>:weighted avg       0.62      0.62      0.62      1825
+[1,0]<stdout>:

@@ -1,0 +1,14 @@
+2022-09-12 12:32:11.982330: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-09-12 12:32:13.159979: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 44182 MB memory:  -> device: 0, name: Quadro RTX 8000, pci bus id: 0000:86:00.0, compute capability: 7.5
+2022-09-12 12:32:28.994770: I tensorflow/stream_executor/cuda/cuda_dnn.cc:368] Loaded cuDNN version 8101
+Traceback (most recent call last):
+  File "/scratch/hl2347/speech_emotion_recognition/FIN_topology/melspectrogram/melspectrogram_split_2_4.py", line 150, in <module>
+    ax[0].plot(epochs , train_loss , label = 'Training Loss')
+  File "/ext3/miniconda3/lib/python3.9/site-packages/matplotlib/axes/_axes.py", line 1632, in plot
+    lines = [*self._get_lines(*args, data=data, **kwargs)]
+  File "/ext3/miniconda3/lib/python3.9/site-packages/matplotlib/axes/_base.py", line 312, in __call__
+    yield from self._plot_args(this, kwargs)
+  File "/ext3/miniconda3/lib/python3.9/site-packages/matplotlib/axes/_base.py", line 498, in _plot_args
+    raise ValueError(f"x and y must have same first dimension, but "
+ValueError: x and y must have same first dimension, but have shapes (50,) and (100,)
