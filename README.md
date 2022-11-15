@@ -52,3 +52,4 @@ FINs were designed utilizing two neural network structures. The first structure 
 *Variance weighted R² was used to evaluate melspectrogram FIN to compensate 
 
 ### Ensemble models
+![learning_curves](/speech_emotion_recognition_using_feature_imitating_networks/SER/learning_curves.png)
