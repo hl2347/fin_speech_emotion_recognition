@@ -14,3 +14,6 @@ Model: Ensemble model 2 (Ensemble model with trainable FIN weights)
 1. frame prediction
 2. Find the elbow
 3. k-means clustering
+
+
+## Baseline model
