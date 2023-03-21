@@ -173,18 +173,18 @@ layer = Flatten()(layer)
 layer = Dense(8)(layer) # Target class number
 layer = Activation('softmax')(layer)
 
-model = Model(inputs=inputs, outputs=layer)
+new_model = Model(inputs=inputs, outputs=layer)
 utterance_model = Model(inputs=inputs, outputs=feature_output)
 
 # #apply weights
-model.compile(optimizer = "adam" , loss = 'categorical_crossentropy' , metrics = ['accuracy'])
-utterance_model.compile(optimizer = "adam" , loss = 'categorical_crossentropy' , metrics = ['accuracy'])
-print("compiled model")
 
-model.set_weights(weights)
+new_model.set_weights(weights)
 utterance_model.set_weights(weights[:40])
 print("set model weights")
 
+new_model.compile(optimizer = "adam" , loss = 'categorical_crossentropy' , metrics = ['accuracy'])
+utterance_model.compile(optimizer = "adam" , loss = 'categorical_crossentropy' , metrics = ['accuracy'])
+print("compiled model")
 
 
 threshold = 0.8
@@ -202,11 +202,13 @@ for path, emotion in zip(dataset.file, dataset.Emotions):
     # data,sr = librosa.load(path)
     #previous path: ../new_directory/train/angry_0.csv -> ../fixed_new_directory/train/angry_0.csv
     correct_path = "../fixed_new_directory/" + "/".join(path.split("/")[2:])
+    
+    emotion = path.split("/")[-1].split("_")[0]
     try:
         data = pd.read_csv(correct_path).values.reshape(-1)
         data = divide_into_frames_collective(data)
 
-        res = model.predict(np.array([data])) # output would be like: array([[0., 0., 0., 1., 0., 0., 0., 0.]], dtype=float32)
+        res = new_model.predict(np.array([data])) # output would be like: array([[0., 0., 0., 1., 0., 0., 0., 0.]], dtype=float32)
         audio_pred = emotions[res.argmax()] #audio_pred would be like "fear"
         if audio_pred == emotion:
             correct = 1
