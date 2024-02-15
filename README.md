@@ -34,8 +34,8 @@ python3 data_path.py
 python3 new_directory.py
 ```
 
-#### Input
-Each audio file was split into frames each of length 2,048 (equivalent to 9.3ms) hopped by 512 (25% of the frame length). This setting was chosen to match the default configurations in the librosa methods. 
+#### Input (Augio segmentation)
+Each audio file was split into segments each of length 2,048 (equivalent to 9.3ms) hopped by 512 (25% of the frame length). This setting was chosen to match the default configurations in the librosa methods. 
 
 #### Output
 The feature labels were computed using the librosa library.
@@ -46,8 +46,13 @@ The output dimensions for each feature is the following:
 4. MFCC : 20
 5. Melspectrogram : 128
 
+
 #### Model topology
 FINs were designed utilizing two neural network structures. The first structure used only fully connected feed-forward layers, while the second structure also included a one-dimensional convolution layer. RMS FIN was only composed of fully connected layers because the approximation was relatively simple, but for the remaining four features, one-dimensional convolution layers were used to take advan- tage of the kernel operations that made the approximation much more efficient.
+
+Typical FIN models look like the following images,
+![RMS_FIN](/codes/FIN_final_codes/rms/rms_structure.png)
+![RMS_FIN](/codes/FIN_final_codes/mfcc/mfcc_structure.png)
 
 #### FIN training results
 
