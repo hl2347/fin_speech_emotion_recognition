@@ -1,3 +1,6 @@
+## Speech Emotion Recognition using Feature Imitating Networks
+In this project, we trained Feature Imitating Networks (FINs) to approximate standard audio features, and explored their usage in Speech Emotion Recognition (SER). We utilized four SER datasets to train five FINs to each predict five audio representations (ZCR, RMS, Chroma STFT, Mel-spectrogram, and MFCCs). We then integrated the FINs in end-to-end SER models; pre-training and then tuning FINs for the SER task yielded the highest F1-score (0.63) outperforming the baseline model (0.56) that used pre-computed feature representations.
+
 ### Baseline model
 https://www.kaggle.com/code/shivamburnwal/speech-emotion-recognition/notebook
 
@@ -21,7 +24,15 @@ Feature imitating networks (FINs) are neural networks pre-trained to output a fe
 Similar to the baseline model, we train FINs to output five speech features: Zero-crossing rate (ZCR), Root mean squared (RMS), Chroma short-time fourier transform (Chroma STFT), Mel-frequency cepstrum coefficients (MFCC), and Melspectrogram.
 
 #### Preprocessing
-Each audio file was augmented in two ways. The first augmentation approach applied noise to the original data, while the second augmentation, slightly varied the speed and pitch if the audio signal. In total, 36,483 the audio files were used in model training.
+The audio data was processed with a sampling rate of 22kHz. The audio files were augmented in two ways: the first augmentation approach applied gaussian noise to the original data, while the second augmentation approach slightly reduced the speed and increased pitch of the audio signal (by a factor of 0.8 and 0.7 respectively). The audio was then segmented into 2048 samples (93ms) windows with a 512 sample (25\%) shift.
+
+With the 4 datasets downloaded, you can run following codes to pre-process the audio files to be ready for model training.
+
+Under the directory "codes/pre_processing" run,
+```
+python3 data_path.py
+python3 new_directory.py
+```
 
 #### Input
 Each audio file was split into frames each of length 2,048 (equivalent to 9.3ms) hopped by 512 (25% of the frame length). This setting was chosen to match the default configurations in the librosa methods. 
