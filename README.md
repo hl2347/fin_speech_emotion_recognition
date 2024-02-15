@@ -52,7 +52,7 @@ FINs were designed utilizing two neural network structures. The first structure 
 
 Typical FIN models look like the following images,
 ![RMS_FIN](/codes/FIN_final_codes/rms/rms_structure.png)
-![RMS_FIN](/codes/FIN_final_codes/mfcc/mfcc_structure.png)
+![mfcc_FIN](/codes/FIN_final_codes/mfcc/mfcc_structure.png)
 
 #### FIN training results
 
