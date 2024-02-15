@@ -57,6 +57,16 @@ Model structure of the RMS FIN
 ![mfcc_FIN](/codes/FIN_final_codes/mfcc/mfcc_structure.png)
 Model structure of the MFCC FIN
 
+
+In order to train FINs, run the following codes under the directory "codes/FIN_final_codes/FEATURE_NAME/"
+```
+python3 zcr.py
+python3 rms.py
+python3 chroma.py
+python3 mfcc.py
+python3 melspectrogram.py
+```
+
 #### FIN training results
 
 |   Model  | Output Dim. | Layers | Params |  R²  | R² (ESD) |
@@ -68,7 +78,7 @@ Model structure of the MFCC FIN
 | Melspec. |     128     |  Conv. |  983K  | 97%* |      97%*     |
 
 
-*Variance weighted R² was used to evaluate melspectrogram FIN to compensate 
+*Variance weighted R² was used to evaluate melspectrogram FIN to compensate high variability of values across the indices.
 
 ### Ensemble models
 ![learning_curves](/speech_emotion_recognition_using_feature_imitating_networks/SER/learning_curves.jpg)
