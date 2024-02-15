@@ -51,8 +51,8 @@ The output dimensions for each feature is the following:
 FINs were designed utilizing two neural network structures. The first structure used only fully connected feed-forward layers, while the second structure also included a one-dimensional convolution layer. RMS FIN was only composed of fully connected layers because the approximation was relatively simple, but for the remaining four features, one-dimensional convolution layers were used to take advan- tage of the kernel operations that made the approximation much more efficient.
 
 Typical FIN models look like the following images,
-![RMS_FIN](/codes/FIN_final_codes/rms/rms_structure.png)
-![mfcc_FIN](/codes/FIN_final_codes/mfcc/mfcc_structure.png)
+![RMS_FIN](/codes/FIN_final_codes/rms/rms_structure.png "Model structure of the RMS FIN")
+![mfcc_FIN](/codes/FIN_final_codes/mfcc/mfcc_structure.png "Model structure of the MFCC FIN")
 
 #### FIN training results
 
